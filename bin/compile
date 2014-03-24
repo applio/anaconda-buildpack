@@ -92,7 +92,7 @@ fi
 
 # Install dependencies with Conda then Pip.
 puts-step "Installing dependencies using Conda"
-/app/.heroku/miniconda/bin/conda install pip --yes -q
+/app/.heroku/miniconda/bin/conda install pip conda=3.3.0 --yes -q
 /app/.heroku/miniconda/bin/conda install --file conda-requirements.txt --yes -q
 /app/.heroku/miniconda/bin/pip install -r requirements.txt
 
