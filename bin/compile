@@ -95,7 +95,7 @@ puts-step "Installing dependencies using Conda"
 /app/.heroku/miniconda/bin/conda install pip conda=3.3.0 --yes -q
 /app/.heroku/miniconda/bin/conda install --file conda-requirements.txt --yes -q
 /app/.heroku/miniconda/bin/pip install -r requirements.txt
-if [ -d Miniconda-latest-Linux-x86_64.sh ]; then
+if [ -e Miniconda-latest-Linux-x86_64.sh ]; then
     puts-step "Removing cached copy of Miniconda distro install script"
     rm -f Miniconda-latest-Linux-x86_64.sh
     rm -f anaconda-1.4.6.tar.gz
